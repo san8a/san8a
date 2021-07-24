@@ -1,0 +1,580 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu" ,sans-serif;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  
+  header{
+    background: none;
+  }
+  .menu-icon{
+    position: fixed; 
+    top: 5%;
+    left: 95%;
+    width: 50px;
+    height: 50px;
+    background-image: url(1x/outline_menu_white_24dp.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: #000;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    z-index: 30;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s linear;
+    
+  }
+  
+  .menu-icon:hover{
+    opacity: .9;
+    transform: scale(1.1);
+    
+  }
+  
+  .navigation-menu{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    top: 0;
+    right: -100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .6s;
+    z-index: 40;
+    
+    
+  }
+  .vr{
+    visibility: hidden;
+
+  }
+  .elmenu{
+    position: fixed;
+    width: 30%;
+    height: 100%;
+    top: 0%;
+    left: 70%;
+    display: flex;
+    background-color: rgb(0,0,0,1);
+    align-items: center;
+    justify-content: center;
+    transition: .6s linear;
+    z-index: 40;
+    visibility: visible;
+    text-decoration: none;
+  }
+ 
+  .elmenu nav{
+    display: grid;
+    color: #fff;
+  }
+  .elmenu li{
+    margin: 20px 0;
+    overflow: hidden;
+    color: #fff;
+  }
+  
+
+
+  
+  .navigation-menu nav{
+    display: grid;
+    opacity: 1;
+  }
+  
+  .navigation-menu li{
+    margin: 20px 0;
+    overflow: hidden;
+    opacity: 1;
+  }
+  
+  .navigation-menu a{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    transform: translateY(40px);
+    opacity: 1;
+  }
+  
+  .navigation-menu a::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 15px;
+    background: #fbfd74;
+    bottom: 0;
+    left: 0;
+    border-radius: 15px;
+    z-index: -1;
+    transition: .2s linear;
+    opacity: 1;
+  }
+  
+  .navigation-menu a:hover::before{
+    width: 100%;
+    opacity: 1;
+  }
+  
+  p{
+    max-width: 80%;
+    margin: auto;
+    padding: 40px 0;
+    font-size: 18px;
+    line-height: 1.4em;
+    text-align: justify;
+  }
+  
+  
+  
+  
+  .navigation-menu.active{
+    right: 0;
+  }
+  
+  .navigation-menu.active a{
+    transform: translateY(0);
+    transition: .6s linear;
+    opacity: 1;
+  }
+  
+  .navigation-menu.active li:nth-child(1) a{
+    transition-delay: .2s;
+    opacity: 1;
+  }
+  
+  .navigation-menu.active li:nth-child(2) a{
+    transition-delay: .4s;
+    opacity: 1;
+  }
+  
+  .navigation-menu.active li:nth-child(3) a{
+    transition-delay: .6s;
+  }
+  
+  .navigation-menu.active li:nth-child(4) a{
+    transition-delay: .8s;
+  }
+  
+  .navigation-menu.active li:nth-child(5) a{
+    transition-delay: 1s;
+  }
+.ini{
+    position: absolute;
+    top: 5%;
+    left: 0%;
+    background-image: url(la-bandera-colombiana_0_0_900_560.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+} 
+.bien{
+    position: absolute;
+    top: 17%;
+    left: 5%;
+    color: #f1f1f1;
+    font-family: 'Fjalla One', sans-serif;
+    text-align: center;
+    font-size: 100px;
+    z-index: 10;
+}
+.bimg{
+    background-image: url(dd.png);
+    background-size: 100%;
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: 20%;
+    left: 70%;
+    z-index: 10;
+    color: white;
+    opacity: 0.5;
+    transition: all 0.5s;
+}
+.more{
+    background-image: url(more.png);
+    background-size: 100%;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    z-index: 10;
+    color: white;
+    opacity: 0.5;
+    transition: all 0.5s;
+}
+.mapa{
+  background-image: url(mapa.png);
+  background-size: 100%;
+  width: 700px;
+  height: 900px;
+  position: absolute;
+  top: 200%;
+  left: 60%;
+  z-index: 10;
+  color: white;
+  opacity: 0.5;
+  transition: all 0.5s;
+}
+.interes{
+  background-image: url(ban.png);
+  background-size: 100%;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  z-index: 11;
+  color: white;
+  border-radius: 25px;
+  transition: all .4s;
+  background-repeat: no-repeat;
+}
+.interes:hover{
+width: 50px;
+height: 50px;
+background-repeat: no-repeat;
+border-radius: 50px;
+
+}
+.etnia1{
+  background-color: #fff;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 25%;
+  left: 0%;
+  z-index: 10;
+  
+  transition: all 0.5s;
+  opacity: 0;
+}
+.transform_left{
+  transform: translateX(20%);
+}
+.normal{
+  opacity: 1;
+  transform: none;
+}
+.xd{
+z-index: 10;
+
+}
+body {
+	background: #000;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+
+
+.slider{
+  position: relative;
+  background: #000116;
+  width: 800px;
+  min-height: 500px;
+  margin: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slider .slide{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: circle(0% at 0 50%);
+}
+
+.slider .slide.active{
+  clip-path: circle(150% at 0 50%);
+  transition: 2s;
+}
+
+.slider .slide img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider .slide .info{
+  position: absolute;
+  color: #222;
+  background: rgba(255, 255, 255, 0.3);
+  width: 75%;
+  margin-top: 50px;
+  margin-left: 50px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 5%);
+}
+
+.slider .slide .info h2{
+  font-size: 2em;
+  font-weight: 800;
+}
+
+.slider .slide .info p{
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.navigation{
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.slider:hover .navigation{
+  opacity: 1;
+}
+
+.prev-btn, .next-btn{
+  z-index: 999;
+  font-size: 2em;
+  color: #222;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev-btn{
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.next-btn{
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.navigation-visibility{
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-visibility .slide-icon{
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.5);
+  width: 20px;
+  height: 10px;
+  transform: translateY(-50px);
+  margin: 0 6px;
+  border-radius: 2px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+}
+
+.navigation-visibility .slide-icon.active{
+  background: #4285F4;
+}
+
+@media (max-width: 900px){
+  .slider{
+    width: 100%;
+  }
+
+  .slider .slide .info{
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 500px){
+  .slider .slide .info h2{
+    font-size: 1.8em;
+    line-height: 40px;
+  }
+
+  .slider .slide .info p{
+    font-size: 0.9em;
+  }
+}
+.btn{
+  width: 200px;
+  height: 60px;
+  background: none;
+  border: 4px solid;
+  color: #ec0606;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+  
+}
+
+.btn::before,.btn::after{
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 4px;
+  background: #000;
+  transform: skewX(50deg);
+  transition: .4s linear;
+}
+
+.btn::before{
+  top: -4px;
+  left: 10%;
+}
+
+.btn::after{
+  bottom: -4px;
+  right: 10%;
+}
+
+.btn:hover::before{
+  left: 80%;
+}
+
+.btn:hover::after{
+  right: 80%;
+}
+.btn1{
+  width: 200px;
+  height: 60px;
+  background: none;
+  border: 4px solid;
+  color: #1c0cf3;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+  
+}
+
+.btn1::before,.btn1::after{
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 4px;
+  background: #000;
+  transform: skewX(50deg);
+  transition: .4s linear;
+}
+
+.btn1::before{
+  top: -4px;
+  left: 10%;
+}
+
+.btn1::after{
+  bottom: -4px;
+  right: 10%;
+}
+
+.btn1:hover::before{
+  left: 80%;
+}
+
+.btn1:hover::after{
+  right: 80%;
+}
+.btn2{
+  width: 200px;
+  height: 60px;
+  background: none;
+  border: 4px solid;
+  color: #fbfd74;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+  
+}
+
+.btn2::before,.btn2::after{
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 4px;
+  background: #000;
+  transform: skewX(50deg);
+  transition: .4s linear;
+}
+
+.btn2:before{
+  top: -4px;
+  left: 10%;
+}
+
+.btn2::after{
+  bottom: -4px;
+  right: 10%;
+}
+
+.btn2:hover::before{
+  left: 80%;
+}
+
+.btn2:hover::after{
+  right: 80%;
+}
+.bt{
+  background: none;
+  border: 2px solid #fff;
+  font-family: "montserrat",sans-serif;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  min-width: 200px;
+  margin: 10px;
+  cursor: pointer;
+  transition: color 0.4s linear;
+  color: #fff;
+}
+.bt:hover{
+  color: #000;
+}
+.bt::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: -1;
+  transition: transform 0.5s;
+  transform-origin: 0 0;
+  transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+}
+.bt1::before{
+  transform: scaleX(0);
+}
+.bt1:hover::before{
+  transform: scaleX(1);
+}
+.elmenu{
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  align-items: center;
+  transition: all 0,6s;
+  z-index: 1;
+
+}

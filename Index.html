@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biodiversidad</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="stylesheet" href="css.css">
+  <link rel="icon" href="imagen_2021-07-15_214708.ico">
+  <script src="js.js"></script>
+  
+  <style>
+    .container span {
+  font-size: 40px;
+  font-weight: bold;
+  position: relative;
+  font-family: "Fredoka One";
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  letter-spacing: 10px;
+}
+.container span::before {
+  content: var(--l);
+  position: absolute;
+  transform: scale(1.1);
+  filter: blur(15px);
+}
+.container span::after {
+  content: var(--l);
+  position: absolute;
+  height: 200%;
+  width: 300px;
+  top: 80%;
+  left: 0;
+  filter: blur(30px);
+  transform: rotateX(50deg);
+}
+.container span:hover {
+  filter: contrast(250%);
+}
+.container span:nth-child(1) {
+  color: #ffe600;
+}
+.container span:nth-child(2) {
+  color: #ffe600;
+}
+.container span:nth-child(3) {
+  color: #ffe600;
+}
+.container span:nth-child(4) {
+  color: #ffe600;
+}
+.container span:nth-child(5) {
+  color: #2B4FF1;
+}
+.container span:nth-child(6) {
+  color: #2B4FF1;
+}
+.container span:nth-child(7) {
+  color: #2B4FF1;
+}
+.container span:nth-child(8) {
+  color: #A20F0F;
+}
+.container span:nth-child(9) {
+  color: #A20F0F;
+}
+.container span:nth-child(10) {
+  color: #A20F0F;
+}
+.p{
+          position: absolute;
+          top: 5%;
+          left: 5%;
+          width: 91%;
+          height: 91%;
+          background-color: blueviolet;  
+        }
+        .p1{
+          position: absolute;
+          top: 5%;
+          left: 9%;
+          width: 240px;
+          height: 150px;
+          background-color: floralwhite; 
+          z-index: 10;
+        }
+        .p2{
+          position: absolute;
+          top: 5%;
+          left: 38%;
+          width: 250px;
+          height: 150px;
+          background-color: floralwhite; 
+          z-index: 10; 
+        }
+        .p3{
+          position: absolute;
+        top: 5%;
+          left: 75%;
+          width: 250px;
+          height: 150px;
+          background-color: floralwhite;
+          z-index: 10;  
+        }
+        .h1{
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            background-color: gold;
+            z-index: 20;
+            height: 400px;
+            width: 800px;
+            text-align: center;
+            font-size: 200;
+        }
+        .h2{
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            background-color: gold;
+            z-index: 10;
+            height: 400px;
+            width: 800px;
+            text-align: center;
+            font-size: 200;
+        }
+        .h3{
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            background-color: gold;
+            z-index: 10;
+            height: 400px;
+            width: 800px;
+            text-align: center;
+            font-size: 200;
+        }
+        .h4{
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            background-color: gold;
+            z-index: 10;
+            height: 400px;
+            width: 800px;
+            text-align: center;
+            font-size: 200;
+        }
+        .bta1{
+  width: 300px;
+  background: #A19D9D;
+  border: 10px solid #A19D9D;
+  color: black;
+  padding: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 12px 0;
+  
+}
+.bta1:hover{
+ font-size: 30px;
+ width: 400px;
+ background-color: #fff;
+ border: 10px solid #fff;
+}
+
+  </style>
+</head>
+<body>
+
+
+ 
+  <style>
+
+    .b{
+        opacity: 1;
+    }
+    .b::after{
+        content: '';
+        background-color: blue;
+        width: 10%;
+        height: 20%;
+        position: absolute;
+        top: 60%;
+        left: 70px;
+        border-radius: 10px;
+        opacity: 0;
+        transition-property: width;
+        transition-duration: 1s;
+       
+    }
+    .b:hover::after{
+        opacity: 1;
+        width: 70%;
+    }
+    .h{
+        opacity: 1;
+    }
+    .h::after{
+        content: '';
+        background-color: yellow;
+        width: 10%;
+        height: 20%;
+        position: absolute;
+        top: 60%;
+        left: 40px;
+        border-radius: 10px;
+        opacity: 0;
+        transition-property: width;
+        transition-duration: 1s;
+       
+    }
+    .h:hover::after{
+        opacity: 1;
+        width: 70%;
+    }
+    .t{
+        opacity: 1;
+    }
+    .t::after{
+        content: '';
+        background-color: red;
+        width: 10%;
+        height: 20%;
+        position: absolute;
+        top: 60%;
+        left: 42px;
+        border-radius: 10px;
+        opacity: 0;
+        transition-property: width;
+        transition-duration: 1s;
+       
+    }
+    .t:hover::after{
+        opacity: 1;
+        width: 58%;
+    }
+</style>
+
+    <link rel="stylesheet" href="css.css">
+</head>
+<body style="background-color: #000;">
+
+    <header id="Inicio" >
+        <div class="inner-width" >
+          <div class="menu-icon" style="z-index: 101;"  onclick="menu()">
+            
+          </div>
+        </div>
+      </header>
+     
+     
+      
+      <div class="vr" id="me" style="width: 30%;z-index: 100;color: aqua;text-decoration: none;position: fixed;top: 0%;left: 70%;"><nav>
+          
+          <div class="h" style="position: absolute;top: 20%;left: 15%;background-color: #000;z-index: 102;width: 200px;height: 100px;text-align: center;font-size: 40px;color: #fff;font-family: 'Encode Sans SC', sans-serif;"><li ><a href="#Inicio"><font color="white">
+          INICIO</font></a></li></div>
+          <div class="b" style="position: absolute;top: 40%;left: 10%;background-color: #000;z-index: 102;width: 450px;height: 100px;text-align: center;font-size: 40px;color: #fff;font-family: 'Encode Sans SC', sans-serif;"><li><a href="#miau"><font color="white">INTRODUCCION</font></a></li></div>
+            <div class="t" style="position: absolute;top: 60%;left: 15%;background-color: #000;z-index: 102;width: 200px;height: 100px;text-align: center;font-size: 40px;color: #fff;font-family: 'Encode Sans SC', sans-serif;"> <li><a href="#mapa"><font color="white">MAPA</font></a></li></div><div></div>
+        </nav></div>
+      <script>
+        function menu(){
+          if(me.className=="elmenu"){
+            me.className="vr";
+            
+          }
+          else{
+            me.className="elmenu";
+            
+          }
+    
+        }
+      </script>
+
+<div class="container" >
+  <span style="--l: 'D';">D</span>
+  <span style="--l: 'I';">I</span>
+  <span style="--l: 'V'; ">V</span>
+  <span style="--l: 'E';">E</span>
+  <span style="--l: 'R';">R</span>
+  <span style="--l: 'S';">S</span>
+  <span style="--l: 'I';">I</span>
+  <span style="--l: 'D';">D</span>
+  <span style="--l: 'A';">A</span>
+  <span style="--l: 'D';">D</span>
+
+</div>
+<script>
+  
+function et1(){
+
+if(  etn1.style.opacity==1){
+  etn1.style.opacity=0;
+}
+else{
+  
+  etn1.style.opacity=1;
+  etn2.style.opacity=0;
+  etn3.style.opacity=0;
+}
+
+  
+
+}
+function et2(){
+
+if(  etn2.style.opacity==1){
+  etn2.style.opacity=0;
+
+}
+else{
+  etn1.style.opacity=0;
+  etn2.style.opacity=1;
+  etn3.style.opacity=0;
+}
+
+  
+
+}
+
+function et3(){
+
+if(  etn3.style.opacity==1){
+  etn3.style.opacity=0;
+
+}
+else{
+  etn1.style.opacity=0;
+  etn3.style.opacity=1;
+  etn2.style.opacity=0;
+}
+
+  
+
+}
+
+</script>
+
+<div class="ini">
+
+  <div class="bien">Conoce la diversidad <br> Etnica de Colombia </div>
+
+</div>
+<div class="more xd" id="miau"></div>
+<div style="position: absolute;top:99%;left: 0%;background-color: #000;width: 100%;height: 100%;"></div>
+<div class="mapa xd" id="mapa" style="background-color: #fff;z-index: 21;">
+<div class="interes" onclick="et1()" style="position: absolute;top: 10%;left: 48%;"></div>
+<div class="interes" onclick="et1()" style="position: absolute;top: 55%;left: 48%;"></div>
+<div class="interes" onclick="et2()" style="position: absolute;top: 27%;left: 35%;"></div>
+<div class="interes" onclick="et3()" style="position: absolute;top: 39%;left: 27%;"></div>
+<div class="interes" onclick="et1()" style="position: absolute;top: 39%;left: 20%;"></div>
+<div class="interes" onclick="et2()" style="position: absolute;top: 47%;left: 14%;"></div>
+<div class="interes" onclick="et2()" style="position: absolute;top: 58%;left: 14%;"></div>
+<div class="interes" onclick="et3()" style="position: absolute;top: 54%;left: 19%;"></div>
+<div class="interes" onclick="et3()" style="position: absolute;top: 49%;left: 33%;"></div>
+<div class="interes" onclick="et1()" style="position: absolute;top: 49%;left: 53%;"></div>
+<div class="interes" onclick="et1()" style="position: absolute;top: 85%;left: 53%;"></div>
+</div>
+
+
+<div style="position: absolute;top: 190%;left: 65%;color: #000;font-size: 50px;z-index: 21;font-family: 'Encode Sans SC', sans-serif;">Mapa de las etnias</div>
+<div style="position: absolute;top: 180%;left: 0%;width: 100%;height: 1500px;background-color: rgb(249, 255, 250);z-index: 20;"></div>
+<div style="z-index: 21;position: absolute;left: 0%;top: 290%;background-image: url(indi\ \(1\).png);background-size: 100%;width: 500px;height: 500px;background-repeat: no-repeat;"></div>
+
+
+<div class="etnia1" id="etn1" style="position: absolute;left: 0%;color: #000;top: 240%;font-size: 130px;z-index: 21;width: 400px;font-family: 'Encode Sans SC', sans-serif;font-weight: bold;">Indigenas</div>
+<div class="etnia1" id="etn2" style="position: absolute;left: 0%;color: #000;top: 240%;font-size: 130px;z-index: 21;width: 400px;font-family: 'Encode Sans SC', sans-serif;font-weight: bold;">Afrodescendientes</div>
+
+<div class="etnia1" id="etn3" style="position: absolute;left: 0%;color: #000;top: 240%;font-size: 130px;z-index: 21;width: 400px;font-family: 'Encode Sans SC', sans-serif;font-weight: bold;">Gitanos</div>
+
+<div id="imdigenas" style="position: absolute;top: 220%;left: 10%;width: 200px;height: 200px;background-size: 100%;background-repeat: no-repeat;background-image: url(logito.png);z-index: 1;" id="indigen"></div>
+
+<div id="ind" style="z-index: 21;position: absolute;left: 0%;top: 230%;background-image: url(indi\ \(1\).png);background-size: 100%;width: 500px;height: 500px;background-repeat: no-repeat;opacity: 0;"></div>
+
+<div style="position: absolute;top: 200%;left: 0px;width: 100%;height: 100%;background-color: white;z-index: 20;"></div>
+
+<div style="position: absolute;top: 103%;left: 30%;width: 65%;height: 90%;background-color: #000;">
+  <div id="principal" class="" style="position: absolute;left: 20%;top: 10%;z-index: 18;background-color: #000;width: 900px;height: 500px;"></div></a>
+  <div id="principal" style="position: absolute;left: 25%;top: 40%;width: 700px;height: 500px;z-index: 19;color: #fff;font-size: 20px;"><h1>Etnias</h1><br> Es un conjunto de personas que mantienen una procedencia común. Esto se basa en semejanzas de aspecto exterior, costumbres, idioma, religión o memoria de eventos históricos como migraciones.</div></a>
+  <img src="5.jpg" id="img1"  style="position: absolute;left: 20%;top: 10%;width: 900px;height: 500px;z-index: 1;">
+  <img src="3.jpg" id="eje"  style="position: absolute;left: 20%;top: 10%;width: 900px;height: 500px;z-index: 1;">
+  <img src="2.jpg" id="indigenas"  style="position: absolute;left: 20%;top: 10%;width: 900px;height: 500px;z-index: 1;">
+  <img src="1.jpg" id="gitanos"  style="position: absolute;left: 20%;top: 10%;width: 900px;height: 500px;z-index: 1;">
+  <a href="gita.html"><button class="bt bt1" id="bgita" style="position: absolute;left: 50%; top: 70%;z-index: 1;">Conocer mas</button></a>
+  <a href="indi.html"><button class="bt bt1" id="bindi" style="position: absolute;left: 50%; top: 70%;z-index: 1;">Conocer mas</button></a>
+<a href="afro.html"><button class="bt bt1" id="bafro" style="position: absolute;left: 50%; top: 70%;z-index: 1;">Conocer mas</button></a>
+<button class="btn2 " style="position: absolute;top: 23%;left: 2%;" onclick="indi()">indigenas</button></a>
+  <button class="btn1 " style="position: absolute;top: 43%;left: 2%;" onclick="gita()">gitanos</button>
+  
+  <button class="btn" style="position: absolute;top: 63%;left: 2%;" onclick="cambio()">Afrodescendientes</button>
+</div>
+<script>
+  function cambio(){
+  if(img1.style.zIndex==30){
+    bafro.style.zIndex=1;
+    img1.style.zIndex=1;
+  }
+  else{
+      img1.style.zIndex=30;
+      gitanos.style.zIndex=1;
+      indigenas.style.zIndex=1;
+      bgita.style.zIndex=1;
+      bafro.style.zIndex=30;
+      bindi.style,zIndex=1;
+  }
+}
+function gita(){
+  if(gitanos.style.zIndex==31){
+    bgita.style.zIndex=1;
+    gitanos.style.zIndex=1;
+  }
+  else{
+      gitanos.style.zIndex=31;
+      img1.style.zIndex=1;
+      indigenas.style.zIndex=1;
+      bgita.style.zIndex=31;
+      bafro.style.zIndex=1;
+      bindi.style,zIndex=1;
+    
+  }
+}
+function indi(){
+  if(indigenas.style.zIndex==32){
+    indigenas.style.zIndex=1;
+    bindi.style,zIndex=1;
+
+  }
+  else{
+    img1.style.zIndex=1;
+    gitanos.style.zIndex=1;
+    indigenas.style.zIndex=32;
+    bgita.style.zIndex=1;
+    bafro.style.zIndex=1;
+    bindi.style.zIndex=32;
+  }
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+
+<div style="position: absolute;top: 333%;left: 0%;width: 100%;height: 400px;background-color: rgb(0, 0, 0);"></div>
+<div style="position: absolute;top: 360%;left: 10%;background-image: url(logito.png);z-index: 21;width: 217px;height: 217px;"></div>
+<div style="position: absolute;top: 360%;left: 50%;color: rgb(255, 255, 255);z-index: 21;background-color: rgb(0, 0, 0);font-size: 50px; text-align: center;font-family: 'Encode Sans SC', sans-serif;">Santiago Ochoa Quintero  <br><br>       10º </div>
+</body>
+</html>

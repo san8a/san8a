@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biodiversidad</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="stylesheet" href="css.css">
+  <link rel="icon" href="imagen_2021-07-15_214708.ico">
+  <script src="js.js"></script>
+  
+  <style>
+    .container span {
+  
+  font-weight: bold;
+  position: relative;
+  
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  letter-spacing: 10px;
+}
+.container span::before {
+  content: var(--l);
+  position: absolute;
+  transform: scale(1.1);
+  filter: blur(15px);
+}
+.container span::after {
+  content: var(--l);
+  position: absolute;
+  height: 200%;
+  width: 300px;
+  top: 80%;
+  left: 0;
+  filter: blur(30px);
+  transform: rotateX(50deg);
+}
+.container span:hover {
+  filter: contrast(250%);
+}
+.container span:nth-child(1) {
+  color: #ffe600;
+}
+.container span:nth-child(2) {
+  color: #ffe600;
+}
+.container span:nth-child(3) {
+  color: #ffe600;
+}
+.container span:nth-child(4) {
+  color: #ffe600;
+}
+.container span:nth-child(5) {
+  color: #2B4FF1;
+}
+.container span:nth-child(6) {
+  color: #2B4FF1;
+}
+.container span:nth-child(7) {
+  color: #2B4FF1;
+}
+.container span:nth-child(8) {
+  color: #A20F0F;
+}
+.container span:nth-child(9) {
+  color: #A20F0F;
+}
+.container span:nth-child(10) {
+  color: #A20F0F;
+}
+.p{
+          position: absolute;
+          top: 5%;
+          left: 5%;
+          width: 91%;
+          height: 91%;
+          background-color: blueviolet;  
+        }
+        .p1{
+          position: absolute;
+          top: 5%;
+          left: 9%;
+          width: 240px;
+          height: 150px;
+          background-color: floralwhite; 
+          z-index: 10;
+        }
+        .p2{
+          position: absolute;
+          top: 5%;
+          left: 38%;
+          width: 250px;
+          height: 150px;
+          background-color: floralwhite; 
+          z-index: 10; 
+        }
+        .p3{
+          position: absolute;
+        top: 5%;
+          left: 75%;
+          width: 250px;
+          height: 150px;
+          background-color: floralwhite;
+          z-index: 10;  
+        }
+        .h1{
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            background-color: gold;
+            z-index: 20;
+            height: 400px;
+            width: 800px;
+            text-align: center;
+            font-size: 200;
+        }
+        .h2{
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            background-color: gold;
+            z-index: 10;
+            height: 400px;
+            width: 800px;
+            text-align: center;
+            font-size: 200;
+        }
+        .h3{
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            background-color: gold;
+            z-index: 10;
+            height: 400px;
+            width: 800px;
+            text-align: center;
+            font-size: 200;
+        }
+        .h4{
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            background-color: gold;
+            z-index: 10;
+            height: 400px;
+            width: 800px;
+            text-align: center;
+            font-size: 200;
+        }
+        .bta1{
+  width: 300px;
+  background: #A19D9D;
+  border: 10px solid #A19D9D;
+  color: black;
+  padding: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 12px 0;
+  
+}
+.bta1:hover{
+ font-size: 30px;
+ width: 400px;
+ background-color: #fff;
+ border: 10px solid #fff;
+}
+
+  </style>
+</head>
+<body>
+  <style>
+
+    .b{
+        opacity: 1;
+    }
+    .b::after{
+        content: '';
+        background-color: blue;
+        width: 10%;
+        height: 20%;
+        position: absolute;
+        top: 60%;
+        left: 63px;
+        border-radius: 10px;
+        opacity: 0;
+        transition-property: width;
+        transition-duration: 1s;
+       
+    }
+    .b:hover::after{
+        opacity: 1;
+        width: 70%;
+    }
+    .h{
+        opacity: 1;
+    }
+    .h::after{
+        content: '';
+        background-color: yellow;
+        width: 10%;
+        height: 20%;
+        position: absolute;
+        top: 60%;
+        left: 20px;
+        border-radius: 10px;
+        opacity: 0;
+        transition-property: width;
+        transition-duration: 1s;
+       
+    }
+    .h:hover::after{
+        opacity: 1;
+        width: 80%;
+    }
+    .t{
+        opacity: 1;
+    }
+    .t::after{
+        content: '';
+        background-color: red;
+        width: 10%;
+        height: 20%;
+        position: absolute;
+        top: 60%;
+        left: 45px;
+        border-radius: 10px;
+        opacity: 0;
+        transition-property: width;
+        transition-duration: 1s;
+       
+    }
+    .t:hover::after{
+        opacity: 1;
+        width: 78%;
+    }
+</style>
+
+    <link rel="stylesheet" href="css.css">
+</head>
+<body style="background-color: #000;">
+
+    <header id="Inicio" >
+        <div class="inner-width" >
+          <div class="menu-icon" style="z-index: 101;"  onclick="menu()">
+            
+          </div>
+        </div>
+      </header>
+     
+     
+      
+      <div class="vr" id="me" style="width: 30%;z-index: 100;color: aqua;text-decoration: none;position: fixed;top: 0%;left: 70%;"><nav>
+          
+          <div class="h" style="position: absolute;top: 20%;left: 15%;background-color: #000;z-index: 102;width: 200px;height: 100px;text-align: center;font-size: 40px;color: #fff;font-family: 'Encode Sans SC', sans-serif;"><li ><a href="Index.html"><font color="white">
+          VOLVER</font></a></li></div>
+          <div class="b" style="position: absolute;top: 40%;left: 1%;background-color: #000;z-index: 102;width: 450px;height: 100px;text-align: center;font-size: 40px;color: #fff;font-family: 'Encode Sans SC', sans-serif;"><li><a href="#miau"><font color="white">INTRODUCCION</font></a></li></div>
+            <div class="t" style="padding-right: 20px;;position: absolute;top: 60%;right: 30%;background-color: #000;z-index: 102;width: 350px;padding: 0px ;height: 100px;text-align: center;font-size: 40px;color: #fff;font-family: 'Encode Sans SC', sans-serif;"> <li><a href="#multi"><font color="white">MULTIMEDIA</font></a></li></div><div></div>
+        </nav></div>
+      <script>
+
+        function menu(){
+          if(me.className=="elmenu"){
+            me.className="vr";
+            
+          }
+          else{
+            me.className="elmenu";
+            
+          }
+    
+        }
+      </script>
+ 
+
+<div class="container" style="z-index: 40;position: absolute;top: 0px;font-size: 40px;">
+  <span style="--l: 'D';">D</span>
+  <span style="--l: 'I';">I</span>
+  <span style="--l: 'V'; ">V</span>
+  <span style="--l: 'E';">E</span>
+  <span style="--l: 'R';">R</span>
+  <span style="--l: 'S';">S</span>
+  <span style="--l: 'I';">I</span>
+  <span style="--l: 'D';">D</span>
+  <span style="--l: 'A';">A</span>
+  <span style="--l: 'D';">D</span>
+
+</div>
+<div class="container" style="z-index: 40;position: absolute;top: 300px;font-size: 80px;font-weight: 100;text-transform: uppercase;">
+  <span style="--l: 'D';">I</span>
+  <span style="--l: 'I';">N</span>
+  <span style="--l: 'V'; ">D</span>
+  <span style="--l: 'E';">I</span>
+  <span style="--l: 'R';">G</span>
+  <span style="--l: 'S';">E</span>
+  <span style="--l: 'I';">N</span>
+  <span style="--l: 'D';">A</span>
+  <span style="--l: 'A';">S</span>
+
+</div>
+<div style="position: absolute;top: 5%;left: 0%;width: 100%;height: 100%;background-image: url(indigenas.png);background-size: 100%;"></div>
+
+<div style="position: absolute;top: 100%;left: 0%;width: 100%;height: 100%;background-color: transparent;"></div>
+<div id="miau" style="z-index: 10;position: absolute;top:120%;left: 5%;font-size: 30px;color: rgb(0, 0, 0);width: 600px;justify-content: left;background-color: rgb(255, 255, 255);border: 10px solid rgb(0, 0, 0);padding: 50px;text-transform: uppercase;">Según cifras del Dane, un millón de indígenas integran alrededor de 40 pueblos
+    indígenas diseminados por todo nuestro país.
+    </div>
+    .</div>
+<div class="xd" style="opacity: 1;position: absolute;top: 160%;left: 45%;background-image: url(26pue.jpg);background-size: 100%;width: 900px;height: 900px;background-repeat: no-repeat;"></div>
+<div style="position: absolute;top:230%;left: 5%;font-size: 30px;color: #fff;width: 600px;justify-content: left;background-color: #000;border: 10px solid #fff;padding: 50px;text-transform: uppercase;">Los departamentos en los que se ubica la mayor cantidad de población
+    indígena son La Guajira, con 394.683 habitantes; Cauca, con 308.455;
+    Nariño con 206.455; Córdoba, con 202.621 y Sucre con 104.890. Así
+    mismo, las etnias con mayor número de miembros son la Wayuu
+    (380.460), la Zenú, (307.091); los Nasa, (243.176) y Pastos (163.873).
+    Estos pueblos concentran el 58,1% de la población indígena colombiana.</div>
+  <div id="multi" style="z-index: 2;;position: absolute;top: 300%;left: 52%;font-size: 30px;color: #fff;width: 600px;justify-content: left;background-color: transparent;padding: 50px;text-transform: uppercase;font-family: 'Encode Sans SC', sans-serif;">Cultura</div>
+  <video src="y2mate.com - Culturas indígenas de Colombia_480p.mp4" controls style="z-index: 2;width: 600px;height: 600px;position: absolute;top: 300%;left: 52%;"></video>
+<div style="position: absolute;top: 300%;left: 50%;height: 700px;width: 700px;background-color: transparent;z-index: 1;border: 10px solid #fff;"></div>
+<div style="z-index: 2;;position: absolute;top: 430%;left: 52%;font-size: 30px;color: rgb(0, 0, 0);width: 600px;justify-content: left;background-color: transparent;padding: 50px;text-transform: uppercase;font-family: 'Encode Sans SC', sans-serif;">Musica</div>
+<audio src="y2mate.com - Leo Rojas  El Condor Pasa Videoclip.mp3" controls style="z-index: 2;width: 600px;height: 600px;position: absolute;top: 390%;left: 52%;"></audio>
+<div style="position: absolute;top: 430%;left: 50%;height: 300px;width: 700px;background-color: transparent;z-index: 1;border: 10px solid rgb(0, 0, 0);"></div>
+<div style="z-index: 10;;position: absolute;top: 350%;left: 5%;background-image: url(2653938.png);background-repeat: no-repeat;background-size: 100%;width: 500px;height: 500px;"></div>
+<div style="position: absolute;top: 100%;left: 0%;width: 100%;height: 100%;background-color: #fff;"></div>
+<div style="position: absolute;top: 400%;left: 0%;width: 100%;height: 100%;background-color: #fff;"></div>
+</body>
+</html>
